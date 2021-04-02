@@ -265,12 +265,20 @@ class Screen4 extends StatelessWidget {
               onPressed: () async {
                 String value = await Navigator.push(context,
                     new MaterialPageRoute(builder: (BuildContext context) {
-                  return new Center(
-                    child: new GestureDetector(
-                        child: new Text('OK'),
-                        onTap: () {
-                          Navigator.pop(context, "Audio1");
-                        }),
+                  return Column(
+                    children: [
+                      new Center(
+                        child: new GestureDetector(
+                            child: new Text('OK'),
+                            onTap: () {
+                              Navigator.pop(context, "Audio1");
+                            }),
+                      ),
+                      TextButton(
+                        onPressed: () {},
+                        child: Text("TextButton按钮"),
+                      )
+                    ],
                   );
                 }));
                 print(value);
