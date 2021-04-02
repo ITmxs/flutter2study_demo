@@ -1,10 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_study01/study02/beforeandarter.dart';
-import 'package:simple_animations/simple_animations.dart';
-import 'dart:math';
+import 'package:flutter_study01/screens/home.dart';
 
-import 'package:supercharged/supercharged.dart';
+void main() => runApp(MyApp());
 
-import 'studyflutter/hello.dart';
-
-void main() => runApp(new BeforeandAfter());
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        appBarTheme: AppBarTheme(color: Color(0xFF2F5233)),
+        primaryColor: Color(0xFF2F5233),
+        backgroundColor: Color(0xFFDCDCDC),
+      ),
+      home: Home(),
+    );
+  }
+}
